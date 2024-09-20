@@ -4,3 +4,4 @@ duckgpt
 pydantic==1.8.2
 requests
 fastapi-socketio==0.0.10
+fake_useragent
