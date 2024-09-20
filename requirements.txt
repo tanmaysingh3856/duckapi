@@ -1,5 +1,6 @@
-fastapi==0.70.0
-uvicorn==0.15.0
+fastapi==0.95.2
+uvicorn==0.20.0
 duckgpt
 pydantic==1.8.2
 requests
+fastapi-socketio==0.0.10

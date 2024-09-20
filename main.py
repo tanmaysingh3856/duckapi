@@ -17,9 +17,10 @@ class ChatRequest(BaseModel):
 
 @app.get("/models")
 def get_models():
+    """Fetch available DuckGPT models."""
     try:
         models = client.Models()
-        return models
+        return {"models": models}
     except Exception as e:
         logger.error(f"Error getting models: {e}")
         raise HTTPException(status_code=500, detail="A server error has occurred")
@@ -35,4 +36,4 @@ def chat(request: ChatRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="your.server.ip.address", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
